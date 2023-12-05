@@ -21,7 +21,7 @@
     <ClCompile Include="Train.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Task2.cpp">
+    <ClCompile Include="Container.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +29,10 @@
     <ClInclude Include="Train.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Task2.h">
+    <ClInclude Include="Container.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

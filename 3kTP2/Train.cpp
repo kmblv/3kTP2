@@ -2,16 +2,16 @@
 
 ostream& operator<<(ostream& stream, Train& obj)
 {
-	stream << "----------| Train |-----------" << endl
-		<< "Destination: " << obj.getEndPoint() << endl
-		<< "Number: " << obj.getTrainNum() << endl
-		<< "Departure time: " << obj.getTimeStartHours() << ":" << obj.getTimeStartMinutes() << endl;
+	stream << "----------| Поезд |-----------" << endl
+		<< "Пункт назначения: " << obj.getEndPoint() << endl
+		<< "Номер: " << obj.getTrainNum() << endl
+		<< "Время отправления: " << obj.getTimeStartHours() << ":" << obj.getTimeStartMinutes() << endl;
 	return stream;
 }
 
 Train::Train()
 {
-	cout << "Train class constructor called" << endl;
+	cout << "Констуктор был вызван" << endl;
 	sEndPoint = "";
 	sTrainNum = "";
 	sTimeStartHours = "";
@@ -20,7 +20,7 @@ Train::Train()
 
 Train::Train(const Train& obj)
 {
-	cout << "Train copy constructor called" << endl;
+	cout << "Конструктор копирования был вызван" << endl;
 	sEndPoint = obj.sEndPoint;
 	sTrainNum = obj.sTrainNum;
 	sTimeStartHours = obj.sTimeStartHours;
@@ -29,7 +29,7 @@ Train::Train(const Train& obj)
 
 Train::~Train()
 {
-	cout << "Train class destructor called" << endl;
+	cout << "Деструктор был вызван" << endl;
 }
 
 void Train::setEndPoint(string _sEndPoint)

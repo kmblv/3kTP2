@@ -1,19 +1,17 @@
 #pragma once
 #include "Train.h"
 
-class Interface
+class Container
 {
 	Train* data;
 	int size;
 public:
-	Interface();
-	~Interface();
+	Container();
+	~Container();
 	void add();
 	void del();
 	void sort();
 	void red();
-	void sortup();
-	void search();
-	void searchArr();
 	void print();
+	void search();
 };
