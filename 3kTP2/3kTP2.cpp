@@ -94,12 +94,15 @@ int getWords()
 				break;
 			}
 		}
-		if (isAllAlpha && !word.empty()) {
+		if (isAllAlpha && !word.empty() && word.length()<5) {
 			wordCount++; // увеличиваем счетчик слов
 		}
 	}
+	if (wordCount != 0)
+		std::cout << "Количество слов: " << wordCount << std::endl;
+	else
+		std::cout << "Нет слов!" << std::endl;
 
-	std::cout << "Количество слов: " << wordCount << std::endl;
 
 	inputFile.close(); // закрываем файл
 	return 0;
