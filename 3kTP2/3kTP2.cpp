@@ -78,9 +78,9 @@ int main()
 
 int getWords()
 {
-	std::ifstream inputFile("Text.txt");
-	if (!inputFile.is_open()) {
-		std::cerr << "Ошибка открытия файла!" << std::endl;
+	std::ifstream inputFile("Text.txt"); // открываем файл для чтения
+	if (!inputFile.is_open()) { // проверяем, открылся ли файл
+		std::cerr << "Unable to open file" << std::endl;
 		return 1;
 	}
 
@@ -94,15 +94,12 @@ int getWords()
 				break;
 			}
 		}
-		if (isAllAlpha && !word.empty() && word.length()<5) {
+		if (isAllAlpha && !word.empty()) {
 			wordCount++; // увеличиваем счетчик слов
 		}
 	}
-	if (wordCount != 0)
-		std::cout << "Количество слов: " << wordCount << std::endl;
-	else
-		std::cout << "Нет слов!" << std::endl;
 
+	std::cout << "Number of words: " << wordCount << std::endl;
 
 	inputFile.close(); // закрываем файл
 	return 0;
